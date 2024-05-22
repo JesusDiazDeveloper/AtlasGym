@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Atlas</title>
+    <link rel="stylesheet" href="styles/contact_us.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<body>
+    <main class="contact_us_main_container">
+
+        <a href="./index.html" class="return_link">
+            <span class="material-symbols-outlined">
+                undo
+            </span>
+            Volver al inicio
+        </a>
+
+        <h2><span class="gym_name">Atlas Gym</span></h2>
+        <div class="divider"></div>
+
+        <address>Darragueira 2379 - Tandil - Buenos Aires</address>
+
+        <section class="schedules_container">
+
+            <article class="schedules_section">
+                <h3 class="schedules_section_title">Horarios de Atención</h3>
+                <div class="schedules_section_divider"></div>
+                <ul>
+                    <li>Lunes a Viernes de 9:00 a 20:00</li>
+                    <li>Sábados de 9:00 a 13:00</li>
+                </ul>
+
+                <div class="schedules_section_highlight_info">
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>
+                    <p>011 11 11 11</p>
+                </div>
+                <div class="schedules_section_highlight_info">
+                    <span class="material-symbols-outlined">
+                        where_to_vote
+                    </span>
+                    <p>Ver en el Mapa</p>
+                </div>
+            </article>
+
+
+            <article class="schedules_section">
+                <h3 class="schedules_section_title">Horarios de Guardería</h3>
+                <div class="schedules_section_divider"></div>
+                <ul>
+                    <li>Lunes a Viernes de 8:00 a 21:00</li>
+                    <li>Sábados de 9:00 a 13:00</li>
+                </ul>
+                <div class="schedules_section_highlight_info">
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>
+                    <p>011 11 11 11</p>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="prices_container">
+            <div class="prices_card">
+                <small class="prices_card_tag"> Premium </small>
+                <p class="prices_card_name">PREMIUM</p>
+                <p class="big_price"> $10.000  <span class="per_month">/mes</span></p>
+                <small class="prices_old_price">$15.000 </small>
+                <div class="prices_card_divider"></div>
+                <small class="prices_card_bottom_description">Acceso ilimitado a todos los clubes y clases premium, además de beneficios exclusivos y descuentos.</small>
+                <p class="get_plan">Obtener Plan</p>
+            </div>
+            <div class="prices_card">
+                <small class="prices_card_tag"> Mas Popular </small>
+                <p class="prices_card_name">FITNESS</p>
+                <p class="big_price">$15.000  <span class="per_month">/mes</span></p>
+                <small class="prices_old_price">$20.000 </small>
+                <div class="prices_card_divider"></div>
+                <small class="prices_card_bottom_description">Acceso a todos los clubes, comodidades premium y algunas clases grupales.</small>
+                <p class="get_plan">Obtener Plan</p>
+            </div>
+            <div class="prices_card">
+                <small class="prices_card_tag"> Starter </small>
+                <p class="prices_card_name">BASIC</p>
+                <p class="big_price">$20.000 <span class="per_month">/mes</span></p>
+                <small class="prices_old_price"> $25.000 </small>
+                <div class="prices_card_divider"></div>
+                <small class="prices_card_bottom_description">Acceso a un club.</small>
+                <a class="get_plan">Obtener Plan</a>
+            </div>
+        </section>
+
+        <section class="contact_form_container">
+
+            <h2 class="section_title">Contactanos</h2>
+            <div class="divider"></div>
+            <form class="contact_form">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" placeholder="Ingresa tu nombre">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Ingresa tu email">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <input type="submit" value="Enviar">
+                <label for="message">Mensaje</label>
+                <select name="activity_selected" id="">
+                    <option value="BASIC">BASIC</option>
+                    <option value="FITNESS">FITNESS</option>
+                    <option value="PREMIUM">PREMIUM</option>
+                </select>
+                <label for="descount">posee descuento de promocion?</label>
+                <div>
+                    <label for="descount">Si!</label>
+                    <input type="radio" name="descount" value="no">
+                    <label for="descount">No</label>
+                    <input type="radio" name="descount" value="yes">
+                </div>
+                
+            </form>
+        </section>
+
+
+    </main>
+
+</body>
