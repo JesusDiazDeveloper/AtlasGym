@@ -3,10 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gimnasio Atlas</title>
+
     <link rel="stylesheet" href="styles/contact_us.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./assets/logos/Atlas_icono.ico" type="image/x-icon">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -72,19 +78,21 @@
             <div class="prices_card">
                 <small class="prices_card_tag"> Premium </small>
                 <p class="prices_card_name">PREMIUM</p>
-                <p class="big_price"> $10.000  <span class="per_month">/mes</span></p>
+                <p class="big_price"> $10.000 <span class="per_month">/mes</span></p>
                 <small class="prices_old_price">$15.000 </small>
                 <div class="prices_card_divider"></div>
-                <small class="prices_card_bottom_description">Acceso ilimitado a todos los clubes y clases premium, además de beneficios exclusivos y descuentos.</small>
+                <small class="prices_card_bottom_description">Acceso ilimitado a todos los clubes y clases premium,
+                    además de beneficios exclusivos y descuentos.</small>
                 <p class="get_plan">Obtener Plan</p>
             </div>
             <div class="prices_card">
                 <small class="prices_card_tag"> Mas Popular </small>
                 <p class="prices_card_name">FITNESS</p>
-                <p class="big_price">$15.000  <span class="per_month">/mes</span></p>
+                <p class="big_price">$15.000 <span class="per_month">/mes</span></p>
                 <small class="prices_old_price">$20.000 </small>
                 <div class="prices_card_divider"></div>
-                <small class="prices_card_bottom_description">Acceso a todos los clubes, comodidades premium y algunas clases grupales.</small>
+                <small class="prices_card_bottom_description">Acceso a todos los clubes, comodidades premium y algunas
+                    clases grupales.</small>
                 <p class="get_plan">Obtener Plan</p>
             </div>
             <div class="prices_card">
@@ -99,31 +107,33 @@
         </section>
 
         <section class="contact_form_container">
-
             <h2 class="section_title">Contactanos</h2>
             <div class="divider"></div>
             <form class="contact_form">
+                <picture class="form_logo_container">
+                    <img src="./assets/logos/Atlas_icono.svg" alt="atlas logo">
+                </picture>
                 <label for="name">Nombre</label>
                 <input type="text" id="name" placeholder="Ingresa tu nombre">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Ingresa tu email">
                 <label for="message">Mensaje</label>
                 <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <input type="submit" value="Enviar">
-                <label for="message">Mensaje</label>
+                <label for="message">Elija su plan</label>
                 <select name="activity_selected" id="">
                     <option value="BASIC">BASIC</option>
                     <option value="FITNESS">FITNESS</option>
                     <option value="PREMIUM">PREMIUM</option>
                 </select>
-                <label for="descount">posee descuento de promocion?</label>
+                <label for="descount_question">posee descuento de promocion?</label>
                 <div>
                     <label for="descount">Si!</label>
-                    <input type="radio" name="descount" value="no">
+                    <input type="radio" name="descount" value="yes" >
                     <label for="descount">No</label>
-                    <input type="radio" name="descount" value="yes">
+                    <input type="radio" name="descount" value="no" checked>
                 </div>
-                
+
+                <input type="submit" value="Enviar" class="primary_button">
             </form>
         </section>
 
