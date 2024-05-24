@@ -80,12 +80,15 @@ address{
 }
 .prices_card{
     width: 230px;
-    height: 230px;
+    /* height: 230px; */
     background-color: var(--gray_400);
     padding: 1rem;
     border: 2px solid var(--gray_300);
     transition: background-color 0.5s ease-in-out;
 }
+
+
+
 
 .prices_card:hover {
     background-color: var(--gray_600); /* Girar 360 grados al hacer hover */
@@ -100,7 +103,7 @@ address{
 }
 
 .big_price span.per_month{
-    font-size: 0.8rem;
+    font-size: clamp(0.5rem, -1.23rem + 3.609vw, 0.8rem);
 }
 
 .prices_old_price{
@@ -196,4 +199,30 @@ option {
 option:hover {
     background-color: #ff0000 !important;
     color: aqua;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .prices_card{
+        width: 70%;
+        align-self: center;
+    }
+    .prices_container{
+        flex-direction: column;
+    }
+    .big_price span.per_month{
+        font-size: 0.8rem;
+    }
+    .schedules_container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .prices_card{
+        width: 100%;
+        align-self: center;
+    }
 }
