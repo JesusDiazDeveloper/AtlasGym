@@ -51,6 +51,13 @@ a:hover{
     color: #cf0202;
 }
 
+@media(max-width: 991px) {
+    .header-links{
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+}
+
 /*footer*/
 
 .footer{
