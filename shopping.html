@@ -16,11 +16,35 @@
     <link rel="stylesheet" href="/styles/headerfooter.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    
+    <!-- del hamburguesa -->
+    <link rel="stylesheet" href="styles/menu_responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <body>
-    <header class="header">  
+    <header class="header">
+        <div class="menu_responsive_container">
+            <div class="menuResponsive">
+                <div class="menu_responsive_logo">
+                    <img class="logo_menu_mobile" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
+                </div>
+                <button class="botonMenu">
+                <i class="fa-solid fa-bars iconoMenu"></i>
+                </button>
+            </div>
+
+        </div>
+        <nav class="nav_responsive">
+            <!-- barra de navegacion  -->
+            <ul class = "botonera"> 
+                <li class="botonesNav" ><a href="/index.html">Inicio</a></li>
+                <li class="botonesNav"><a href="/shopping.html">Tienda</a></li>
+                <li class="botonesNav"><a href="/contact_us.html">Contactanos</a></li>
+                <li class="botonesNav"><a href="/login.html">Iniciar Sesion</a></li>
+            </ul>
+        </nav>
+        
         <nav class="header-links">
-            <img class="logo" src="/assets/logos/Atlas_Header.png" alt="">
+            <img class="logo" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
             <ul class="links">
                 <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/shopping.html">Tienda</a></li>
@@ -167,5 +191,5 @@
     </footer>
 
 </body>
-
+<script src="./js/hamburguer.js"></script>
 </html>
