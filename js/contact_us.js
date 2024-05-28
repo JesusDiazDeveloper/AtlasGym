@@ -4,15 +4,16 @@ const nameErrorSpan = document.getElementById('nameError');
 const emailErrorSpan = document.getElementById('emailError');
 const emailTypeErrorErrorSpan = document.getElementById('emailTypeError');
 const messageErrorSpan = document.getElementById('messageError');
-const activityErrorSpan = document.getElementById('activityError'); 
+const activityErrorSpan = document.getElementById('activityError');
 const overlay = document.querySelector('.overlay');
 const successModal = document.querySelector('.success_modal');
 const errorModal = document.querySelector('.error_modal');
 // const modal_continue_button = document.getElementsByClassName('modal_continue_button');
 const contactForm = document.getElementById('contactForm');
 
+// *************** CONTACT FORM ***************
 
-contactForm.addEventListener('submit', (event)=> { 
+contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
     let isValid = true;
 
@@ -30,32 +31,32 @@ contactForm.addEventListener('submit', (event)=> {
     });
 
     if (name.value.trim() === '') {
-        nameErrorSpan.classList.remove( "hidden" );
-        nameErrorSpan.classList.add( "shown" );
+        nameErrorSpan.classList.remove("hidden");
+        nameErrorSpan.classList.add("shown");
         isValid = false;
     }
 
     if (email.value.trim() === '') {
-        emailErrorSpan.classList.remove( "hidden" );
-        emailErrorSpan.classList.add( "shown" );
+        emailErrorSpan.classList.remove("hidden");
+        emailErrorSpan.classList.add("shown");
         isValid = false;
     }
 
     if (!email.value.includes('@')) {
-        emailTypeErrorErrorSpan.classList.remove( "hidden" );
-        emailTypeErrorErrorSpan.classList.add( "shown" );
+        emailTypeErrorErrorSpan.classList.remove("hidden");
+        emailTypeErrorErrorSpan.classList.add("shown");
         isValid = false;
     }
 
     if (message.value.trim() === '') {
-        messageErrorSpan.classList.add( "shown" );
-        messageErrorSpan.classList.remove( "hidden" );
+        messageErrorSpan.classList.add("shown");
+        messageErrorSpan.classList.remove("hidden");
         isValid = false;
     }
 
     if (activity.value.trim() === '') {
-        activityErrorSpan.classList.remove( "hidden" );
-        activityErrorSpan.classList.add( "shown" );
+        activityErrorSpan.classList.remove("hidden");
+        activityErrorSpan.classList.add("shown");
         isValid = false;
     }
 
@@ -89,3 +90,5 @@ function hideOverlayAndmodal() {
     successModal.classList.add('hidden');
     successModal.classList.remove('shown');
 }
+
+
