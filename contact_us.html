@@ -17,14 +17,43 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link rel="stylesheet" href="/styles/headerfooter.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+
+
+    <link rel="stylesheet" href="/styles/headerfooter.css">
+
+    <link rel="stylesheet" href="styles/menu_responsive.css">
+
+    <!-- del hamburguesa -->
+    <link rel="stylesheet" href="styles/menu_responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
 <body>
-    <header class="header">  
+    <header class="header">
+        <div class="menu_responsive_container">
+            <div class="menuResponsive">
+                <div class="menu_responsive_logo">
+                    <img class="logo_menu_mobile" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
+                </div>
+                <button class="botonMenu">
+                    <i class="fa-solid fa-bars iconoMenu"></i>
+                </button>
+            </div>
+
+        </div>
+        <nav class="nav_responsive">
+            <!-- barra de navegacion  -->
+            <ul class="botonera">
+                <li class="botonesNav"><a href="/index.html">Inicio</a></li>
+                <li class="botonesNav"><a href="/shopping.html">Tienda</a></li>
+                <li class="botonesNav"><a href="/contact_us.html">Contactanos</a></li>
+                <li class="botonesNav"><a href="/login.html">Iniciar Sesion</a></li>
+            </ul>
+        </nav>
+
         <nav class="header-links">
-            <img class="logo" src="/assets/logos/Atlas_Header.png" alt="">
+            <img class="logo" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
             <ul class="links">
                 <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/shopping.html">Tienda</a></li>
@@ -124,36 +153,68 @@
         <section class="contact_form_container">
             <h2 class="section_title">Contactanos</h2>
             <div class="divider"></div>
-            <form class="contact_form">
+            <form class="contact_form" id="contactForm" method="POST">
+
                 <picture class="form_logo_container">
                     <img src="./assets/logos/Atlas_icono.svg" alt="atlas logo">
                 </picture>
+
+
                 <label for="name">Nombre</label>
                 <input type="text" id="name" placeholder="Ingresa tu nombre">
+                <small class="error_message" id="nameError">Este campo es requerido.</small>
+
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Ingresa tu email">
+                <small class="error_message" id="emailError">Este campo es requerido.</small>
+                <small class="error_message" id="emailTypeError">Ingrese un mail válido.</small>
+
                 <label for="message">Mensaje</label>
                 <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <small class="error_message" id="messageError">Este campo es requerido.</small>
+
                 <label for="message">Elija su plan</label>
-                <select name="activity_selected" id="">
+                <select name="activity_selected" id="activity">
+                    <option value="">Seleccione un plan</option>
                     <option value="BASIC">BASIC</option>
                     <option value="FITNESS">FITNESS</option>
                     <option value="PREMIUM">PREMIUM</option>
                 </select>
-                <label for="descount_question">posee descuento de promocion?</label>
+                <small class="error_message" id="activityError">Este campo es requerido.</small>
+
+                <label for="descount_question" class="descount_question">¿Posee descuento de promoción?</label>
                 <div>
-                    <label for="descount">Si!</label>
-                    <input type="radio" name="descount" value="yes" >
+                    <label for="descount">¡Si!</label>
+                    <input type="radio" name="descount" value="yes">
                     <label for="descount">No</label>
                     <input type="radio" name="descount" value="no" checked>
                 </div>
 
                 <input type="submit" value="Enviar" class="primary_button">
             </form>
+
+            <div class="modal_container">
+                <div class="success_modal modal hidden">
+                    <p class="success_modal_title">
+                        <span>Mensaje Recibido</span> <br>
+                        ¡Gracias por contactarnos!
+                    </p>
+                    <button class=" modal_continue_button">continuar</button>
+                </div>
+                <div class="error_modal modal hidden">
+                    <p class="error_modal_title">¡Ha ocurrido un error!</p>
+                    <button class=" modal_continue_button">continuar</button>
+                </div>
+            </div>
         </section>
 
 
+
+
     </main>
+    <div class="overlay hidden">
+
+    </div>
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
@@ -193,4 +254,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/contact_us.js"></script>
+    <script src="./js/hamburguer.js"></script>
 </body>

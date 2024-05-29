@@ -1,14 +1,13 @@
-
 @import '../styles/common.css';
 
-body{
+body {
     background-color: var(--background-color);
 }
 
 .shopping_main_container {
+    padding-top: 0.5rem;
     background-color: var(--background-color);
     color: var(--gray_200);
-    padding-top: 3rem;
     max-width: 1440px;
     margin: auto;
     padding-bottom: 3rem;
@@ -20,21 +19,21 @@ body{
     color: var(--gray_100);
 }
 
-span.gym_name{
+span.gym_name {
     font-size: 2.5rem;
 }
 
-.shopping_main_container h2.section_title{
+.shopping_main_container h2.section_title {
     margin-bottom: 0.4rem;
     margin-top: 1rem;
     text-align: start;
     padding-left: var(--padding_for_section_title);
 }
 
-.divider{
+.divider {
     height: 2px;
     width: 30%;
-    background: linear-gradient( 90deg, var(--primary-600), var(--primary-300) );
+    background: linear-gradient(90deg, var(--primary-600), var(--primary-300));
     margin-left: var(--padding_for_section_title);
     margin-bottom: 2rem;
 }
@@ -54,7 +53,7 @@ span.gym_name{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    transition: transform 0.5s ease-out , background 0.5s ease;
+    transition: transform 0.5s ease-out, background 0.5s ease;
 }
 
 .product_card:hover {
@@ -63,12 +62,13 @@ span.gym_name{
     box-shadow: 0px 0px 15px 5px rgba(255, 3, 3, 0.398);
 }
 
-.img_container{
+.img_container {
     width: 150px;
     height: 150px;
     margin-top: 1rem;
 }
-.img_container img{
+
+.img_container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -84,6 +84,12 @@ span.gym_name{
     margin: 1rem 0;
 }
 
-.product_info .primary_button{
+.product_info .primary_button {
     margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .shopping_main_container {
+        padding: 1rem 3rem;
+    }
 }
