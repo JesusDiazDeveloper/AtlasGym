@@ -50,6 +50,10 @@
     font-size: 18px;
     line-height: 40px;
   }
+
+  .form-register .registro{
+    margin-bottom: 30px;
+  }
   
   .form-register a {
     color: white;
