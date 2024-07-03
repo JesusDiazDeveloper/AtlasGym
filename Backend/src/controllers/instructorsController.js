@@ -24,10 +24,10 @@ const getInstructorById = (req, res) => {
 
 const createInstructor = (req, res) => {
     console.log("Creating Instructor...");
-    const { name,lastName, phone } = req.body;
+    const { name,last_name, phone } = req.body;
 
-    const sql = 'INSERT INTO Instructor (name,last_name,phone) VALUES (?,?,?, )';
-    db.query(sql, [name, lastName, phone], (err, result) => {
+    const sql = 'INSERT INTO Instructor (name,last_name,phone) VALUES (?,?,? )';
+    db.query(sql, [name, last_name, phone], (err, result) => {
         if (err) throw err;
         res.json(
             {
