@@ -4,9 +4,11 @@ const fs = require('fs');
 const path = require('path');
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: process.env.MYSQL_DB_HOST,
+    port: process.env.MYSQL_DB_PORT,
+    user: process.env.MYSQL_DB_USER,
+    password: process.env.MYSQL_DB_PASSWORD,
+    
 });
 
 connection.connect((err) => {
