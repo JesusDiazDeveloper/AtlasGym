@@ -44,15 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 deleteButton.textContent = 'Borrar';
                 deleteButton.classList.add('button', 'deleteButton');
                 deleteButton.addEventListener('click', () => {
+                    console.log(product.id_product);
                     // Lógica para borrar el producto
-                    fetch(`https://atlas-gym.vercel.app/products/${product.id}`, {
+                    fetch(`https://atlas-gym.vercel.app/products/${product.id_product}`, {
                         method: 'DELETE',
                         headers: {
                             'Authorization': `Bearer ${token}`,
                             'Content-Type': 'application/json'
                         }
-                    })
-                        .then(response => response.json())
+                    }).then(response => {
+                            if (response.ok) {
+                                console.log(response);
+                                return response.json();
+                            } else {
+                                alert('Error al borrar el producto');
+                                throw new Error('Error al borrar el producto');
+                            }
+                        })
                         .then(data => {
                             alert(`Producto ${product.name} borrado`);
                             row.remove(); // Eliminar la fila de la tabla
