@@ -94,6 +94,7 @@ span.gym_name{
 }
 
 .main_container{
+    padding: 0 2rem;
     padding-top: 0.5rem;
     background-color: var(--background-color);
     color: var(--gray_200);
