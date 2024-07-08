@@ -31,11 +31,8 @@ span.gym_name {
 }
 
 .divider {
-    height: 2px;
     width: 30%;
-    background: linear-gradient(90deg, var(--primary-600), var(--primary-300));
     margin-left: var(--padding_for_section_title);
-    margin-bottom: 2rem;
 }
 
 .products_container {

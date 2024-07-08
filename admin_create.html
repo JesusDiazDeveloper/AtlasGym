@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,61 +20,87 @@
 
     <link rel="stylesheet" href="/styles/headerfooter.css">
     <link rel="stylesheet" href="styles/menu_responsive.css">
-    <link rel="stylesheet" href="styles/shopping.css">
-
+    <link rel="stylesheet" href="styles/admin.css">
+    
 </head>
 
 <body>
     <header class="header">
-        <div class="header_info_container">
-            <div class="menu_responsive_container">
-                <div class="menuResponsive">
-                    <div class="menu_responsive_logo">
-                        <img class="logo_menu_mobile" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
-                    </div>
-                    <button class="botonMenu">
-                        <i class="fa-solid fa-bars iconoMenu"></i>
-                    </button>
+        <div class="menu_responsive_container">
+            <div class="menuResponsive">
+                <div class="menu_responsive_logo">
+                    <img class="logo_menu_mobile" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
                 </div>
-
+                <button class="botonMenu">
+                    <i class="fa-solid fa-bars iconoMenu"></i>
+                </button>
             </div>
-            <nav class="nav_responsive">
-                <!-- barra de navegacion  -->
-                <ul class="botonera">
-                    <li class="botonesNav"><a href="/index.html">Inicio</a></li>
-                    <li class="botonesNav"><a href="/shopping.html">Tienda</a></li>
-                    <li class="botonesNav"><a href="/contact_us.html">Contactanos</a></li>
-                    <li class="botonesNav"><a href="/login.html">Iniciar Sesion</a></li>
-                </ul>
-            </nav>
 
-            <nav class="header-links">
-                <img class="logo" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
-                <ul class="links">
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/shopping.html">Tienda</a></li>
-                    <li><a href="/contact_us.html">Contactanos</a></li>
-                    <li><a href="/login.html">Iniciar Sesion</a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
-    <main class="shopping_main_container">
+        <nav class="nav_responsive">
+            <!-- barra de navegacion  -->
+            <ul class="botonera">
+                <li class="botonesNav"><a href="/index.html">Inicio</a></li>
+                <li class="botonesNav"><a href="/shopping.html">Tienda</a></li>
+                <li class="botonesNav"><a href="/contact_us.html">Contactanos</a></li>
+                <li class="botonesNav"><a href="/login.html">Logout</a></li>
+            </ul>
+        </nav>
 
-        <a href="./index.html" class="return_link">
+        <nav class="header-links">
+            <img class="logo" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
+            <ul class="links">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/shopping.html">Tienda</a></li>
+                <li><a href="/contact_us.html">Contactanos</a></li>
+                <li><a href="/login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="admin_main_container main_container">
+
+        <a href="./admin.html" class="return_link">
             <span class="material-symbols-outlined">
                 undo
             </span>
             Volver al inicio
         </a>
 
-        <h1>Tienda Oficial de <span class="gym_name">Atlas Gym</span></h1>
+        <h1> <span class="gym_name">Seccion Administrativa</span></h1>
 
-        <h2 class="section_title">Todos los productos</h2>
         <div class="divider"></div>
-        <section class="products_container">
-            <!-- the products are loaded here by JS  -->
-        </section>
+
+        
+
+        <div class="login-container">
+            <h4>Crear Producto</h4>
+            <form id="createProductForm">
+                <input type="text" id="img" class="controls" placeholder="Imagen (ej. img2.jpg)" required>
+                <input type="text" id="name" class="controls" placeholder="Nombre del Producto" required>
+                <input type="number" id="price" class="controls" placeholder="Precio" required>
+                <input type="number" id="stock" class="controls" placeholder="Stock" required>
+                <input type="number" id="id_category" class="controls" placeholder="ID Categoría" required>
+                <button type="submit" class="primary_button">Crear Producto</button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
 
     </main>
     <footer class="footer">
@@ -120,6 +147,6 @@
 
 </body>
 <script src="./js/hamburguer.js"></script>
-<script src="./js/shopping.js"></script>
+<script src="./js/admin_create.js"></script>
 
 </html>

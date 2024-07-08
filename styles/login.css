@@ -1,76 +1,98 @@
 @import '../styles/common.css';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
-  body{
-    background-color: #121214;
-  }
+body {
+    background-color: var(--background-color);
+    color: var(--gray_100);
+    display: flex;
+    flex-direction: column;
+}
 
-  .login-container{
-   
-    background-color: #121214;
-  }
-
-  .form-register {
-    width: 400px;
-    background: #29292e;
-    padding: 30px;
-    margin: auto;
-    margin-top: 50px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-  }
-  
-  .form-register h4 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .controls {
+.login-container {
+    background-color: var(--gray_600);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
-    background: #24303c;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #c53b1f;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: white;
-  }
-  
-  .form-register p {
-    height: 40px;
+    max-width: 400px;
+}
+
+.login-container h4 {
+    margin-bottom: 1rem;
     text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-  }
+}
 
-  .form-register .registro{
-    margin-bottom: 30px;
-  }
-  
-  .form-register a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .form-register a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .form-register .botons {
+.controls {
     width: 100%;
-    background: #77110f;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-  }
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--gray_500);
+    border-radius: 0.25rem;
+    color: var(--gray_100);
+}
+
+.primary_button {
+    background-color: var(--primary-500);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.primary_button:hover {
+    background-image: linear-gradient(120deg, var(--primary-700), var(--primary-600));
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    .controls {
+        padding: 0.4rem;
+    }
+
+    .primary_button {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .login-container h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1rem;
+    }
+
+    .controls {
+        padding: 0.3rem;
+    }
+
+    .primary_button {
+        padding: 0.3rem 0.6rem;
+    }
+
+    .login-container h4 {
+        font-size: 1rem;
+    }
+}
+
+.login_main_container{
+    width: 90%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem 2rem;     
+    min-height: 70vh;
+}

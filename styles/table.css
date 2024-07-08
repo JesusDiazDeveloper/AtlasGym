@@ -1,0 +1,47 @@
+@import 'common.css';
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    background-color: var(--gray_600);
+    overflow: hidden;
+    border-radius: 20px;
+}
+th, td {
+    border: 1px solid var(--gray_300);
+    padding: 8px;
+    color: var(--gray_200);
+}
+th {
+    background-color: var(--gray_300);
+}
+.button {
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.editButton {
+    background-color: #4CAF50; /* Green */
+}
+.deleteButton {
+    background-color: #f44336; /* Red */
+}
+
+.actions-cell{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.price-cell{
+    text-align: end;
+}

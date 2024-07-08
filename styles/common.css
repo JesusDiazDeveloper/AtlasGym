@@ -52,6 +52,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body{
+    background-color: var(--background-color);
+}
+
 /* Buttons */
 
 .primary_button{
@@ -79,6 +83,7 @@ span.gym_name{
     color: var(--gray_100);
     display: flex;
     align-items: center;
+    align-self: flex-start  ;
     gap: 0.1rem;
     margin-bottom: 1rem;
     cursor: pointer
@@ -86,4 +91,21 @@ span.gym_name{
 
 .return_link:visited{
     color: var(--gray_100);
+}
+
+.main_container{
+    padding-top: 0.5rem;
+    background-color: var(--background-color);
+    color: var(--gray_200);
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-600), var(--primary-300));
+    /* margin-left: var(--padding_for_section_title); */
+    margin-bottom: 2rem;
 }

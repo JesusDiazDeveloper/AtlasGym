@@ -1,0 +1,19 @@
+@import './common.css';
+@import './table.css';
+@import './form.css';
+
+table {
+    width: 80%;
+    margin: auto;
+}
+
+.create_product_button_container{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem ;
+}
+
+.create_product_button{
+    width: fit-content;
+}
+

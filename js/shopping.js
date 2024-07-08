@@ -11,7 +11,8 @@
 
 
 
-const url = 'https://62b5c3ad42c6473c4b39c3af.mockapi.io/api/gym_products';
+// const url = 'https://62b5c3ad42c6473c4b39c3af.mockapi.io/api/gym_products';
+const url = 'https://atlas-gym.vercel.app/products';
 const products_container = document.querySelector('.products_container');
 
 const loadProducts = () => {

@@ -12,6 +12,8 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -19,13 +21,15 @@
 
     <link rel="stylesheet" href="/styles/headerfooter.css">
     <link rel="stylesheet" href="styles/menu_responsive.css">
-    <link rel="stylesheet" href="styles/shopping.css">
+    <link rel="stylesheet" href="styles/admin.css">
 
 </head>
 
 <body>
     <header class="header">
         <div class="header_info_container">
+
+
             <div class="menu_responsive_container">
                 <div class="menuResponsive">
                     <div class="menu_responsive_logo">
@@ -43,7 +47,7 @@
                     <li class="botonesNav"><a href="/index.html">Inicio</a></li>
                     <li class="botonesNav"><a href="/shopping.html">Tienda</a></li>
                     <li class="botonesNav"><a href="/contact_us.html">Contactanos</a></li>
-                    <li class="botonesNav"><a href="/login.html">Iniciar Sesion</a></li>
+                    <li class="botonesNav"><a href="/login.html">Logout</a></li>
                 </ul>
             </nav>
 
@@ -53,12 +57,12 @@
                     <li><a href="/index.html">Inicio</a></li>
                     <li><a href="/shopping.html">Tienda</a></li>
                     <li><a href="/contact_us.html">Contactanos</a></li>
-                    <li><a href="/login.html">Iniciar Sesion</a></li>
+                    <li><a href="/login.html">Logout</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="shopping_main_container">
+    <main class="admin_main_container main_container">
 
         <a href="./index.html" class="return_link">
             <span class="material-symbols-outlined">
@@ -67,13 +71,28 @@
             Volver al inicio
         </a>
 
-        <h1>Tienda Oficial de <span class="gym_name">Atlas Gym</span></h1>
+        <h1> <span class="gym_name">Seccion Administrativa</span></h1>
 
-        <h2 class="section_title">Todos los productos</h2>
         <div class="divider"></div>
-        <section class="products_container">
-            <!-- the products are loaded here by JS  -->
-        </section>
+
+        <div class="create_product_button_container">
+            <button type="button" class="primary_button create_product_button"> Crear un producto </button>
+        </div>
+
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>Nombre del Producto</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los productos se cargarán aquí -->
+            </tbody>
+        </table>
+
+
 
     </main>
     <footer class="footer">
@@ -118,8 +137,46 @@
         </div>
     </footer>
 
+    <!-- Overlay y formulario de actualización -->
+    <div class="overlay"></div>
+
+    <div class="pop_up_container">
+        <div class="login-container">
+            <h4>Actualizar Producto</h4>
+            <button id="closeFormButton" class="close_button material-icons-outlined"><span
+                    class="material-symbols-outlined">
+                    close
+                </span></button>
+            <form id="updateProductForm" class="form">
+                <div>
+                    <label for="img">Imagen:</label>
+                    <input class="controls" type="text" id="imgUpdate" name="img" placeholder="URL de la imagen" required>
+                </div>
+                <div >
+                    <label for="name">Nombre del Producto:</label>
+                    <input class="controls" type="text" id="nameUpdate" name="name" placeholder="Nombre del producto" required>
+                </div>
+                <div >
+                    <label for="price">Precio:</label>
+                    <input class="controls" type="number" id="priceUpdate" name="price" placeholder="Precio del producto" required>
+                </div>
+                <div >
+                    <label for="stock">Stock:</label>
+                    <input class="controls" type="number" id="stockUpdate" name="stock" placeholder="Cantidad en stock" required>
+                </div>
+                <div >
+                    <label for="id_category">ID de Categoría:</label>
+                    <input class="controls"  type="number" id="id_categoryUpdate" name="id_category" placeholder="ID de categoría" required>
+                </div>
+                <input type="hidden" id="productIdUpdate" name="productIdUpdate">
+                <button type="submit" class="primary_button">Actualizar Producto</button>
+            </form>
+        </div>
+    </div>
+
+
 </body>
 <script src="./js/hamburguer.js"></script>
-<script src="./js/shopping.js"></script>
+<script src="./js/admin.js"></script>
 
 </html>

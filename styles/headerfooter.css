@@ -13,13 +13,21 @@ body{
 }
 
 main{
-    margin: 15px;
+    /* margin: 15px; */
 }
 
 /* header */
 
 .header{
-    background-color: #202024;
+    background-color: var(--background_del_menu_responsive);
+    width: 100%;
+
+    border-bottom: 2px solid red;
+}
+
+.header_info_container{
+    max-width: 1440px;
+    margin: auto;
 }
 
 .logo{

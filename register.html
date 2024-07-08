@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="/styles/headerfooter.css">
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/menu_responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="./assets/logos/Atlas_icono.ico" type="image/x-icon">
     <title>Gimnasio Atlas</title>
+    <link rel="stylesheet" href="styles/menu_responsive.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="styles/register.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header_info_container">
@@ -20,21 +28,21 @@
                         <img class="logo_menu_mobile" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
                     </div>
                     <button class="botonMenu">
-                    <i class="fa-solid fa-bars iconoMenu"></i>
+                        <i class="fa-solid fa-bars iconoMenu"></i>
                     </button>
                 </div>
-    
+
             </div>
             <nav class="nav_responsive">
                 <!-- barra de navegacion  -->
-                <ul class = "botonera"> 
-                    <li class="botonesNav" ><a href="/index.html">Inicio</a></li>
+                <ul class="botonera">
+                    <li class="botonesNav"><a href="/index.html">Inicio</a></li>
                     <li class="botonesNav"><a href="/shopping.html">Tienda</a></li>
                     <li class="botonesNav"><a href="/contact_us.html">Contactanos</a></li>
                     <li class="botonesNav"><a href="/login.html">Iniciar Sesion</a></li>
                 </ul>
             </nav>
-            
+
             <nav class="header-links">
                 <img class="logo" src="/assets/logos/Atlas_logo_Blanco.png" alt="">
                 <ul class="links">
@@ -46,32 +54,26 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div class="banner">
-            <div class="capa">
-                <div class="contenido">
-                    <h1>Bienvenidos a ATLAS GYM</h1>
-                    <P>
-                        En ATLAS GYM, somos más que un gimnasio: somos tu comunidad para alcanzar tus objetivos de fitness y bienestar. Para acceder a todos nuestros servicios y productos exclusivos, es necesario que te registres en nuestra página web. Al registrarte, podrás:
 
-                        Comprar productos exclusivos: Suplementos, ropa deportiva y accesorios de alta calidad.
-                        Ingresar al gimnasio: Acceso a nuestras modernas instalaciones con equipos de última generación.
-                        Recibir asesoramiento personalizado: Consultas y planes de entrenamiento adaptados a tus necesidades.
-                        Acceder a eventos y clases exclusivas: Talleres y clases grupales para todos los niveles.
-                        Registrarse es sencillo. Haz clic en "Registrarse", completa el formulario y en pocos minutos podrás disfrutar de todos los beneficios que ATLAS GYM tiene para ofrecerte.
-                        
-                        ¡Únete a nuestra comunidad hoy mismo y comienza tu transformación con ATLAS GYM!
-                        
-                        Tu camino hacia una vida más fuerte y saludable comienza aquí.
-                        
-                        ¡Te esperamos!
-                        
-                        El equipo de ATLAS GYM
-                    </P>
-                    <center><a href="/login.html" class="button">Registrarse</a></center>
-                </div>
-            </div>
-        </div>
+
+
+    <main class="login-container">
+        <a href="./index.html" class="return_link">
+            <span class="material-symbols-outlined">
+                undo
+            </span>
+            Volver al inicio
+        </a>
+        <section class="form-register">
+            <h4>Formulario Registro</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+            <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+            <p class="registro">Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Registrar">
+            <p><a href="#">¿Ya tengo Cuenta?</a></p>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
@@ -104,7 +106,8 @@
                 <div class="footer-links">
                     <h4>siguenos</h4>
                     <div class="social-links">
-                        <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr"><i
+                                class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
                         <a href="https://x.com/home?lang=es"><i class="fab fa-twitter"></i></a>
                         <p>&copy; Grupo equipo alfa buena maravilla onda dinamita escuadrón lobo</p>
@@ -113,7 +116,9 @@
             </div>
         </div>
     </footer>
-    <script src="./js/hamburguer.js"></script>
 
+    <script src="./js/hamburguer.js"></script>
+    <script src="./js/login.js"></script>
 </body>
+
 </html>
